@@ -2,27 +2,18 @@
 
 ## About
 
-This repository gives a brief introduction to understand Markov Decision Process (MDP).
+This repository gives a brief introduction to understand Markov Decision Process (MDP). The following material is part of Artificial Intellegence (AI) class by Phd. Carlos A. Lara Álvarez in [Center for Research In Mathematics-CIMAT](https://www.cimat.mx/) (Spring 2019).
+
+Two exercises are given.
+    * Wikipedia exercise - Example of a simple MDP with three states (green circles) and two actions (orange circles), with two rewards (orange arrows)..
+    * World-grid - Example of a MDP with 13 stages (white boxes) and four actions (up, right, down, left), with two rewards (green box and red box)
 
 
 ## Software
 
-The scripts was tested with Anaconda environment--Python 3.7.1, will also work correctly with Python 2.7 and other older Python versions.
+The scripts was tested with MATLAB.
 
-The packages I used to run the code in the book are listed in [requirements.txt](requirements.txt) (Note that some of these exact version numbers may not be available on your platform: you may have to tweak them for your own use).
-To install the requirements using [conda](http://conda.pydata.org), run the following at the command-line:
 
-```
-$ conda install --file requirements.txt
-```
-
-To create a stand-alone environment named ``MDP`` with Python 3.5 and all the required package versions, run the following:
-
-```
-$ conda create -n MDP python=3.5 --file requirements.txt
-```
-
-You can read more about using conda environments in the [Managing Environments](http://conda.pydata.org/docs/using/envs.html) section of the conda documentation.
 
 ## License
 

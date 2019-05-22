@@ -1,4 +1,3 @@
-
 clear all
 clc
 %Action up
@@ -150,28 +149,28 @@ Ra(:,:,4) =[0,     0,      0,      0,      0,      0,      0,      0,      0,   
             0,     0,      0,      0,      0,      0,      0,      0,      0,      0,      0,      0,      0,      0  ; % W
             0,     0,      0,      0,      0,      0,      0,      0,      0,      0,      0,      0,      0,      0  ; % L
             ];
-        
+
 
 discount = 0.999;
 tolerance = 0.0001;
 max_iter = 1000;
 policy = randi(size(Pa,3),1,size(Pa,2));
 
- 
+
 for i=1:max_iter
     cpu_time = cputime;
-    
+
     %Policy evaluation
     [vector_values] = policy_evaluation(Pa,Ra,policy,discount,tolerance,max_iter);
-    
+
     %Policy update
     [policy_new] = policy_update(Pa,Ra,discount,vector_values);
-    
+
     if policy == policy_new
         fprintf('Value function converged after %i iterations\n',i);
         break
     else
-        policy = policy_new      
+        policy = policy_new
     end
     cpu_time = cputime - cpu_time
 end
@@ -204,14 +203,14 @@ policy_new = zeros(1,size(Pa,2));
 valor = zeros(1,size(Pa,3));
 
 %Policy update/improvement
-    for s=1:size(Pa,2)        
+    for s=1:size(Pa,2)
         for a=1:size(Pa,3)
-            sum = 0;            
+            sum = 0;
             for sprime=1:size(Pa,2)
                 sum = sum + Pa(s,sprime,a)* (Ra(s,sprime,a)+ discount* vector_values(sprime));
             end
             valor(a) = sum;
         end
         [~, policy_new(s)] = max(valor);
-    end   
+    end
 end
