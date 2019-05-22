@@ -9,11 +9,13 @@ Two exercises are given.
 * World-grid - Example of a MDP with 13 stages (white boxes) and four actions (up, right, down, left), with two rewards (green box and red box)
 
 
+The algorithm consist on a **Policy Iteration**. For an explanation of policy Iteration I highly recommend to read ["Reinforcement Learning: An Introduction" by Richard Sutton](http://incompleteideas.net/book/the-book-2nd.html).
+
+Policy Iteration uses a **policy evaluation** (evaluate a given policy) and **policy improvement** (finds the best policy).
+
 ## Software
 
 The scripts was tested with MATLAB.
-
-
 
 ## License
 
