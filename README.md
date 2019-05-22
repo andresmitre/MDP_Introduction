@@ -1,4 +1,4 @@
-# Python Data Science Handbook
+# Markov Decision Process for dummies.
 
 ## About
 
